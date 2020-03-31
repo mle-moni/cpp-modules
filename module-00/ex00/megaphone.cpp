@@ -23,8 +23,7 @@ int		main(int ac, char **av)
 	while (i < ac)
 	{
 		std::string arg = av[i];
-		std::string& ref(arg);
-		strtoupcase(ref);
+		strtoupcase(arg);
 		if (ac == i + 1) {
 			arg.push_back('\n');
 		}
