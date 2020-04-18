@@ -17,13 +17,12 @@ ClapTrap::ClapTrap()
 	copy_utility = false;
 }
 
-ClapTrap::ClapTrap(const std::string& p_name, const std::string& p_type)
+ClapTrap::ClapTrap(const std::string& p_name)
 {
 	ClapTrap tmp;
 
 	*this = tmp;
 	name = p_name;
-	type = p_type;
 	tmp.copy_utility = true;
 }
 

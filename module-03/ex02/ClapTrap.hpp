@@ -21,7 +21,7 @@ protected:
 	std::string	type;
 public:
 	ClapTrap();
-	ClapTrap(const std::string& p_name, const std::string& p_type);
+	ClapTrap(const std::string& p_name);
 	ClapTrap(const ClapTrap& obj);
 	~ClapTrap();
 	ClapTrap& operator=(const ClapTrap& obj);
