@@ -28,7 +28,7 @@ ScavTrap::ScavTrap(const std::string& p_name)
 ScavTrap::ScavTrap(const ScavTrap& obj)
 {
 	std::srand(std::time(NULL));
-	std::cout << "Can I shoot something now? Or climb some stairs? SOMETHING exciting?\n"; // stolen from https://borderlands.fandom.com/wiki/Claptrap/Quotes
+	std::cout << "Does this mean I can start dancing? Pleeeeeeaaaaase?!\n"; // stolen from https://borderlands.fandom.com/wiki/Claptrap/Quotes
 	*this = obj;
 }
 
