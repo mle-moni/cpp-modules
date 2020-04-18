@@ -1,5 +1,6 @@
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
+#include "NinjaTrap.hpp"
 
 int	main(void)
 {
@@ -8,6 +9,9 @@ int	main(void)
 	
 	std::string	name2("Bernard");
 	ScavTrap	bernard(name2);
+
+	std::string	name3("Bob");
+	NinjaTrap	bob(name3);
 
 	std::string	target("Bill");
 	std::cout << "\n";
@@ -49,6 +53,26 @@ int	main(void)
 	bernard.challengeNewcomer(target);
 	bernard.challengeNewcomer(target);
 	bernard.challengeNewcomer(target);
+
+	std::cout << "\n";
+
+	bob.rangedAttack(target);
+	bob.meleeAttack(target);
+	bob.takeDamage(5);
+	bob.takeDamage(50);
+	bob.takeDamage(1);
+	bob.takeDamage(4294967295); // UINT_MAX
+	bob.takeDamage(50);
+
+	bob.beRepaired(10);
+	bob.takeDamage(6);
+	bob.beRepaired(4294967295); // UINT_MAX
+
+	bob.ninjaShoebox(roger);
+	bob.ninjaShoebox(bernard);
+	bob.ninjaShoebox(roger);
+	bob.ninjaShoebox(bernard);
+	bob.ninjaShoebox(bob);
 	std::cout << "\n";
 
 	return (0);

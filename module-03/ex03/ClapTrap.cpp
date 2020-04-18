@@ -97,3 +97,8 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	}
 	std::cout << type << " " << name << " is repaired of " << amount << " hit points! (" << hit_points << " remaining)\n";
 }
+
+std::string	ClapTrap::getName(void) const
+{
+	return (name);
+}
