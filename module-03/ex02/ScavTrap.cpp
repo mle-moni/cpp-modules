@@ -38,16 +38,7 @@ ScavTrap::~ScavTrap()
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& obj)
 {
-	hit_points = obj.hit_points;
-	max_hit_points = obj.max_hit_points;
-	energy_points = obj.energy_points;
-	max_energy_points = obj.max_energy_points;
-	level = obj.level;
-	name = obj.name;
-	melee_attack_dammage = obj.melee_attack_dammage;
-	ranged_attack_dammage = obj.ranged_attack_dammage;
-	armor_dammage_reduction = obj.armor_dammage_reduction;
-	copy_utility = false;
+	ClapTrap::operator=(obj);
 	return (*this);
 }
 
