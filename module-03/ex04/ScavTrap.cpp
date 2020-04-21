@@ -1,45 +1,13 @@
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap()
+ScavTrap::ScavTrap(const char* p_name): ClapTrap(p_name, 50, 50, "ScavTrap", 20, 15, 3)
 {
 	std::cout << "ScavTrap constructor\n";
-	energy_points = 50;
-	max_energy_points = 50;
-	melee_attack_dammage = 20;
-	ranged_attack_dammage = 15;
-	armor_dammage_reduction = 3;
-	type = std::string("ScavTrap");
-}
-
-ScavTrap::ScavTrap(const std::string& p_name)
-{
-	std::cout << "ScavTrap constructor\n";
-	energy_points = 50;
-	max_energy_points = 50;
-	melee_attack_dammage = 20;
-	ranged_attack_dammage = 15;
-	armor_dammage_reduction = 3;
-	type = std::string("ScavTrap");
-	name = p_name;
-}
-
-ScavTrap::ScavTrap(const ScavTrap& obj)
-{
-	std::cout << "ScavTrap copy constructor\n";
-	*this = obj;
 }
 
 ScavTrap::~ScavTrap()
 {
-	if (!copy_utility) {
-		std::cout << "ScavTrap destructor\n";
-	}
-}
-
-ScavTrap& ScavTrap::operator=(const ScavTrap& obj)
-{
-	ClapTrap::operator=(obj);
-	return (*this);
+	std::cout << "ScavTrap destructor\n";
 }
 
 void	ScavTrap::challengeNewcomer(std::string const & target)

@@ -1,17 +1,15 @@
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
 #include "NinjaTrap.hpp"
+#include "SuperTrap.hpp"
 
 int	main(void)
 {
-	std::string	name("Roger");
-	FragTrap	roger(name);
+	FragTrap	roger("Roger");
 	
-	std::string	name2("Bernard");
-	ScavTrap	bernard(name2);
+	ScavTrap	bernard("Bernard");
 
-	std::string	name3("Bob");
-	NinjaTrap	bob(name3);
+	NinjaTrap	bob("Bob");
 
 	std::string	target("Bill");
 	std::cout << "\n";
@@ -73,7 +71,33 @@ int	main(void)
 	bob.ninjaShoebox(roger);
 	bob.ninjaShoebox(bernard);
 	bob.ninjaShoebox(bob);
+	
 	std::cout << "\n";
 
+	SuperTrap Bill("Bill");
+
+	std::cout << "\n";
+
+	Bill.vaulthunter_dot_exe(std::string("you"));
+
+	Bill.rangedAttack(std::string("you"));
+	Bill.meleeAttack(std::string("you"));
+	Bill.takeDamage(5);
+	Bill.takeDamage(50);
+	Bill.takeDamage(1);
+	Bill.takeDamage(4294967295); // UINT_MAX
+	Bill.takeDamage(50);
+
+	Bill.beRepaired(10);
+	Bill.takeDamage(6);
+	Bill.beRepaired(4294967295); // UINT_MAX
+
+	Bill.ninjaShoebox(roger);
+	Bill.ninjaShoebox(bernard);
+	Bill.ninjaShoebox(roger);
+	Bill.ninjaShoebox(bernard);
+	Bill.ninjaShoebox(bob);
+
+	std::cout << "\n";
 	return (0);
 }

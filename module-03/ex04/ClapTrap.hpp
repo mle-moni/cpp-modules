@@ -16,15 +16,12 @@ protected:
 	int			melee_attack_dammage;
 	int			ranged_attack_dammage;
 	int			armor_dammage_reduction;
-	bool		copy_utility;
 	std::string	name;
 	std::string	type;
 public:
-	ClapTrap();
-	ClapTrap(const std::string& p_name);
-	ClapTrap(const ClapTrap& obj);
+	ClapTrap(const char* p_name, int hp, int energy, const char* p_type,
+int m_att, int r_att, int armor);
 	~ClapTrap();
-	ClapTrap& operator=(const ClapTrap& obj);
 
 	void	rangedAttack(std::string const & target);
 	void	meleeAttack(std::string const & target);

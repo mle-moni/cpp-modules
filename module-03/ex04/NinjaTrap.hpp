@@ -3,17 +3,14 @@
 
 #include "ClapTrap.hpp"
 
-class NinjaTrap: public ClapTrap
+class NinjaTrap: virtual public ClapTrap
 {
 typedef void(NinjaTrap::*methods_type)(const ClapTrap& target) const;
 private:
 	/* data */
 public:
-	NinjaTrap();
-	NinjaTrap(const std::string& p_name);
-	NinjaTrap(const NinjaTrap& obj);
+	NinjaTrap(const char* p_name);
 	~NinjaTrap();
-	NinjaTrap& operator=(const NinjaTrap& obj);
 
 	void	ninjaShoebox(const ClapTrap& target);
 

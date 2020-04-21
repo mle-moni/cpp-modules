@@ -1,61 +1,26 @@
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap()
+ClapTrap::ClapTrap(const char* p_name, int hp, int energy, const char* p_type,
+int m_att, int r_att, int armor)
 {
 	std::srand(std::time(NULL));
 	std::cout << "ClapTrap constructor\n";
-	hit_points = 100;
-	max_hit_points = 100;
-	energy_points = 100;
-	max_energy_points = 100;
+	hit_points = hp;
+	max_hit_points = hp;
+	energy_points = energy;
+	max_energy_points = energy;
 	level = 1;
-	name = std::string("default_name");
-	type = std::string("ClapTrap");
-	melee_attack_dammage = 30;
-	ranged_attack_dammage = 20;
-	armor_dammage_reduction = 5;
-	copy_utility = false;
-}
-
-ClapTrap::ClapTrap(const std::string& p_name)
-{
-	ClapTrap tmp;
-
-	*this = tmp;
-	name = p_name;
-	tmp.copy_utility = true;
-}
-
-ClapTrap::ClapTrap(const ClapTrap& obj)
-{
-	std::srand(std::time(NULL));
-	std::cout << "ClapTrap constructor\n";
-	*this = obj;
+	name = std::string(p_name);
+	type = std::string(p_type);
+	melee_attack_dammage = m_att;
+	ranged_attack_dammage = r_att;
+	armor_dammage_reduction = armor;
 }
 
 ClapTrap::~ClapTrap()
 {
-	if (!copy_utility) {
-		std::cout << "ClapTrap destructor\n";
-	}
+	std::cout << "ClapTrap destructor\n";
 }
-
-ClapTrap& ClapTrap::operator=(const ClapTrap& obj)
-{
-	hit_points = obj.hit_points;
-	max_hit_points = obj.max_hit_points;
-	energy_points = obj.energy_points;
-	max_energy_points = obj.max_energy_points;
-	level = obj.level;
-	name = obj.name;
-	melee_attack_dammage = obj.melee_attack_dammage;
-	ranged_attack_dammage = obj.ranged_attack_dammage;
-	armor_dammage_reduction = obj.armor_dammage_reduction;
-	type = obj.type;
-	copy_utility = false;
-	return (*this);
-}
-
 
 void	ClapTrap::rangedAttack(std::string const & target)
 {

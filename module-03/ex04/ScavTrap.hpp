@@ -8,11 +8,8 @@ class ScavTrap: public ClapTrap
 private:
 	
 public:
-	ScavTrap();
-	ScavTrap(const std::string& p_name);
-	ScavTrap(const ScavTrap& obj);
+	ScavTrap(const char* p_name);
 	~ScavTrap();
-	ScavTrap& operator=(const ScavTrap& obj);
 
 	void	challengeNewcomer(std::string const & target);
 };

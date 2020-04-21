@@ -1,35 +1,13 @@
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap()
+FragTrap::FragTrap(const char* p_name): ClapTrap(p_name, 100, 100, "FragTrap", 30, 20, 5)
 {
 	std::cout << "FragTrap constructor\n";
-	type = std::string("FragTrap");
-}
-
-FragTrap::FragTrap(const std::string& p_name)
-{
-	std::cout << "FragTrap constructor\n";
-	name = p_name;
-	type = std::string("FragTrap");
-}
-
-FragTrap::FragTrap(const FragTrap& obj)
-{
-	std::cout << "FragTrap copy constructor\n";
-	*this = obj;
 }
 
 FragTrap::~FragTrap()
 {
-	if (!copy_utility) {
-		std::cout << "FragTrap destructor\n";
-	}
-}
-
-FragTrap& FragTrap::operator=(const FragTrap& obj)
-{
-	ClapTrap::operator=(obj);
-	return (*this);
+	std::cout << "FragTrap destructor\n";
 }
 
 void	FragTrap::vaulthunter_dot_exe(std::string const & target)

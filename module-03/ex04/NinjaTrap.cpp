@@ -1,49 +1,13 @@
 #include "NinjaTrap.hpp"
 
-NinjaTrap::NinjaTrap()
+NinjaTrap::NinjaTrap(const char* p_name): ClapTrap(p_name, 60, 120, "NinjaTrap", 60, 5, 0)
 {
 	std::cout << "NinjaTrap constructor\n";
-	hit_points = 60;
-	max_hit_points = 60;
-	energy_points = 120;
-	max_energy_points = 120;
-	melee_attack_dammage = 60;
-	ranged_attack_dammage = 5;
-	armor_dammage_reduction = 0;
-	type = std::string("NinjaTrap");
-}
-
-NinjaTrap::NinjaTrap(const std::string& p_name)
-{
-	std::cout << "NinjaTrap constructor\n";
-	hit_points = 60;
-	max_hit_points = 60;
-	energy_points = 120;
-	max_energy_points = 120;
-	melee_attack_dammage = 60;
-	ranged_attack_dammage = 5;
-	armor_dammage_reduction = 0;
-	type = std::string("NinjaTrap");
-	name = p_name;
-}
-
-NinjaTrap::NinjaTrap(const NinjaTrap& obj)
-{
-	std::cout << "NinjaTrap copy constructor\n";
-	*this = obj;
 }
 
 NinjaTrap::~NinjaTrap()
 {
-	if (!copy_utility) {
-		std::cout << "NinjaTrap destructor\n";
-	}
-}
-
-NinjaTrap& NinjaTrap::operator=(const NinjaTrap& obj)
-{
-	ClapTrap::operator=(obj);
-	return (*this);
+	std::cout << "NinjaTrap destructor\n";
 }
 
 void	NinjaTrap::sayHello(const ClapTrap& target) const
