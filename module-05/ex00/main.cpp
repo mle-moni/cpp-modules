@@ -22,13 +22,13 @@ int main()
 	}
 	try
 	{
-		std::cout << boss;
+		std::cout << boss << "\n";
 		boss.decrementGrade();
-		std::cout << boss;
+		std::cout << boss << "\n";
 		boss.incrementGrade();
-		std::cout << boss;
+		std::cout << boss << "\n";
 		boss.incrementGrade();
-		std::cout << boss;
+		std::cout << boss << "\n";
 	}
 	catch (std::exception & e)
 	{
@@ -36,15 +36,15 @@ int main()
 	}
 	try
 	{
-		std::cout << bill;
+		std::cout << bill << "\n";
 		bill.incrementGrade();
-		std::cout << bill;
+		std::cout << bill << "\n";
 		bill.decrementGrade();
-		std::cout << bill;
+		std::cout << bill << "\n";
 		bill.decrementGrade();
-		std::cout << bill;
+		std::cout << bill << "\n";
 		bill.decrementGrade();
-		std::cout << bill;
+		std::cout << bill << "\n";
 	}
 	catch (std::exception & e)
 	{
