@@ -23,7 +23,6 @@ Bureaucrat::~Bureaucrat()
 
 Bureaucrat&			Bureaucrat::operator=(const Bureaucrat& obj)
 {
-	_name = obj._name;
 	_grade = obj._grade;
 	return (*this);
 }
@@ -60,4 +59,14 @@ std::ostream& operator<<(std::ostream& stream, const Bureaucrat& obj)
 {
 	stream << obj.getName() << ", bureaucrat grade " << obj.getGrade() << "\n";
 	return (stream);
+}
+
+const char* Bureaucrat::GradeTooHighException::what() const throw()
+{
+	return ("GradeTooHighException");
+}
+
+const char* Bureaucrat::GradeTooLowException::what() const throw()
+{
+	return ("GradeTooLowException");
 }
