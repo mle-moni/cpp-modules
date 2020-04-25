@@ -29,7 +29,7 @@ void					PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
 	Form::execute(executor);
 	
-	std::cout << executor << " has been pardoned by Zafod Beeblebrox\n";
+	std::cout << this->getTarget() << " has been pardoned by Zafod Beeblebrox\n";
 }
 
 void				PresidentialPardonForm::abstract_class() const

@@ -35,10 +35,10 @@ void					RobotomyRequestForm::execute(Bureaucrat const & executor) const
 	const int random_int = std::rand();
 
 	std::cout << "**DRILLING NOISES**\n";
-	if (random_int % 2 == 0) {
-		std::cout << executor << " has been robotomized successfully\n";
+	if (random_int % 200 < 100) {
+		std::cout << this->getTarget() << " has been robotomized successfully\n";
 	} else {
-		std::cout << "Failed to robotomize " << executor << "\n";
+		std::cout << "Failed to robotomize " << this->getTarget() << "\n";
 	}
 }
 
