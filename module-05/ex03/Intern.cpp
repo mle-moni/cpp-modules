@@ -37,6 +37,7 @@ Form*		Intern::makeForm(const std::string& request, const std::string& target)
 {
 	for (int i = 0; i < 3; i++) {
 		if (string_indexes[i] == request) {
+			std::cout << "Intern creates " << request << " form" << std::endl;
 			return (copies[i]->new_form(target));
 		}
 	}
